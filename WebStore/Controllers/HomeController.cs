@@ -2,58 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebStore.ViewModels;
 
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly List<EmployeeView> _employees = new List<EmployeeView>
-        {
-            new EmployeeView
-            {
-                Id=1,
-                FirstName = "Иван",
-                LastName = "Пузиков",
-                Patronymic =  "Александрович",
-                Age = 22,
-                Permotion = "oidfgjboinfoiweilcnoisbijdnafov;idjkhg m,ermflksd"
-            },
-            new EmployeeView
-            {
-                Id = 2,
-                FirstName = "Владислав",
-                LastName = "Петров",
-                Patronymic = "Иванович",
-                Age = 35,
-                Permotion = "Таафыщгшваритлофыартощфцустьщжлуыфьжлдпотфыщждатжфыдтасжщфыяуьжщ",
-            },
-            new EmployeeView
-            {
-                Id = 3,
-                FirstName = "Пётр",
-                LastName = "Тарасиков",
-                Patronymic = "Львович",
-                Age = 36,
-                Permotion = "Loadring..."
-            }
 
-        };
 
-        // GET: Home
-        public ActionResult Index()
+        public IActionResult Index()
         {
-            //return Content("Привет. Я твой первый контроллер");
-            return View(_employees);
+            return View();
         }
 
-        public ActionResult Details(int id)
+        public IActionResult Index1()
         {
-            //return Content("Привет. Я твой первый контроллер");
-            return View(_employees.FirstOrDefault(x => x.Id == id));
+            return View();
         }
 
+        public IActionResult Detals()
+        {
+            return View();
+        }
+        public IActionResult s404()
+        {
+            return View();
+        }
+
+        public IActionResult Blog()
+        {
+            return View();
+        }
+
+        
+        public IActionResult Blog_single()
+        {
+            return View();
+        }
+        public IActionResult Cart()
+        {
+            return View();
+        }
+        public IActionResult Checkout()
+        {
+            return View();
+        }
+        public IActionResult Contact_us()
+        {
+            return View();
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Product_details()
+        {
+            return View();
+        }
+        public IActionResult Shop()
+        {
+            return View();
+        }
     }
 }

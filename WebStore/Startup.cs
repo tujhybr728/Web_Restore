@@ -34,6 +34,8 @@ namespace WebStore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             //app.UseMvcWithDefaultRoute();
             // Производим конфигурацию инфраструктуры MVC
             app.UseMvc(routes =>
