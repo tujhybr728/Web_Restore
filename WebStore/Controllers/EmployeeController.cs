@@ -43,7 +43,7 @@ namespace WebStore.Controllers
         };
 
         // GET: Home
-        public ActionResult Index1()
+        public ActionResult Index()
         {
             //return Content("Привет. Я твой первый контроллер");
             return View(_employees);
