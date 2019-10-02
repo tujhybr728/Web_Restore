@@ -22,6 +22,7 @@ namespace WebStore.ViewComponents
             var Categories = GetCategories();
             return View(Categories);
         }
+
         private List<CategoryViewModel> GetCategories()
         {
             var categories = _productService.GetCategories();

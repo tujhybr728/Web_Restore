@@ -25,7 +25,7 @@ namespace WebStore.Controllers
             //return NotFound(); // return new NotFoundResult();
             //return new EmptyResult();
             //return new ContentResult();
-
+            
             return View();
         }
 
