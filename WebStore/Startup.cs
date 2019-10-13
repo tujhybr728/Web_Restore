@@ -37,6 +37,7 @@ namespace WebStore
             });
 
             services.AddScoped<IProductService, SqlProductService>();
+            services.AddScoped<IOrdersService, SqlOrdersService>();
             //services.AddTransient<IEmployeeService, EmployeeService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
 
@@ -91,6 +92,10 @@ namespace WebStore
             app.UseMvc(routes =>
             {
                 // Добавляем обработчик маршрута по умолчанию
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
